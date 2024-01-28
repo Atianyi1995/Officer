@@ -20,7 +20,7 @@ public class Ability_Attack : MonoBehaviour, IAbility
 
     public float attackTime = 2f;
     public float attackDamage = 10f;
-    public bool attacking;
+    public bool attacking,CanHurt;
     bool playAnims;
     public string attackAnimName;
 
@@ -35,8 +35,9 @@ public class Ability_Attack : MonoBehaviour, IAbility
             ability_Move.RunAbility();
             newPosSet = true;
         }
-
-        if (Vector3.Distance(transform.position, newTarget.transform.position) <= 1)
+        Debug.Log(Vector3.Distance(transform.position, newTarget.transform.position));
+        if(newTarget!=null)
+        if (Vector3.Distance(transform.position, newTarget.transform.position) <= 2)
         {
             Debug.Log("Attack");
             Attack();
@@ -55,6 +56,9 @@ public class Ability_Attack : MonoBehaviour, IAbility
         // Damage target
         if (newTarget.GetComponent<IDamageable>() != null)
         {
+            transform.LookAt(new Vector3(newTarget.transform.position.x,
+                                            0,
+                                            newTarget.transform.position.z));
             newTarget.GetComponent<IDamageable>().TakeDamage(attackDamage);
         }
         Debug.LogWarning("Attacking target");
@@ -62,7 +66,25 @@ public class Ability_Attack : MonoBehaviour, IAbility
 
         RunCooldown();
     }
-
+    public void OnTriggerStay(Collider other)
+    {
+        if(other.gameObject.name == "Player")
+        {
+            CanHurt = true;
+        }
+    }
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.name == "Player")
+        {
+            CanHurt = false;
+        }
+    }
+    public void HurtPlayer()
+    {
+        if(CanHurt)
+        newTarget.GetComponent<Hurt>().TakeDamage(20);
+    }
     void CheckForTargets()
     {
         float minDistance = Mathf.Infinity;
@@ -70,13 +92,17 @@ public class Ability_Attack : MonoBehaviour, IAbility
         {
             foreach (GameObject target in Targets)
             {
-                if (Vector3.Distance(transform.position, target.transform.position) < minDistance)
+                if (target != null && target.activeInHierarchy)
                 {
-                    minDistance = Vector3.Distance(transform.position, target.transform.position);
-                    newTargetPos = target.transform.position;
-                    Debug.Log("Target Set");
-                    newTarget = target;
+                    if (Vector3.Distance(transform.position, target.transform.position) < minDistance)
+                    {
+                        minDistance = Vector3.Distance(transform.position, target.transform.position);
+                        newTargetPos = target.transform.position;
+                        Debug.Log("Target Set");
+                        newTarget = target;
+                    }
                 }
+               
             }
         }
     }
@@ -133,5 +159,10 @@ public class Ability_Attack : MonoBehaviour, IAbility
             GetComponent<Animator>().Play(attackAnimName, 1);
         }
        
+    }
+
+    public void EnableIgnoreAbility(bool ignore)
+    {
+        ignoreAbility = ignore;
     }
 }

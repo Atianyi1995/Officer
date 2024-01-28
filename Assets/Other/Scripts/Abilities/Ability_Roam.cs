@@ -74,4 +74,9 @@ public class Ability_Roam : MonoBehaviour, IAbility
     {
         return ignoreAbility;
     }
+
+    public void EnableIgnoreAbility(bool ignore)
+    {
+        ignoreAbility = ignore;
+    }
 }

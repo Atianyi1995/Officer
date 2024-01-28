@@ -55,8 +55,151 @@ MonoBehaviour:
     - rid: 1711985325647069193
       type: {class: EventOnLateUpdate, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
       data: 
-    - rid: 1711985325647069194
+    - rid: 1711985325647069734
+      type: {class: Task, ns: GameCreator.Runtime.Quests, asm: GameCreator.Runtime.Quests}
+      data:
+        m_Completion: 0
+        m_IsHidden: 0
+        m_Name:
+          m_Property:
+            rid: 1711985325647069735
+        m_Description:
+          m_Property:
+            rid: 1711985325647069750
+        m_Color:
+          m_Property:
+            rid: 1711985325647069737
+        m_Sprite:
+          m_Property:
+            rid: 1711985325647069751
+        m_UseCounter: 0
+        m_CountTo:
+          m_Property:
+            rid: 1711985325647069739
+        m_ValueFrom:
+          m_Property:
+            rid: 1711985325647069740
+        m_CheckWhen:
+          m_Event:
+            rid: 1711985325647069741
+        m_OnActivate:
+          m_Instructions:
+            m_Instructions: []
+        m_OnDeactivate:
+          m_Instructions:
+            m_Instructions: []
+        m_OnComplete:
+          m_Instructions:
+            m_Instructions: []
+        m_OnAbandon:
+          m_Instructions:
+            m_Instructions: []
+        m_OnFail:
+          m_Instructions:
+            m_Instructions: []
+    - rid: 1711985325647069735
+      type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: Find the meat truck1
+    - rid: 1711985325647069737
+      type: {class: GetColorColorsWhite, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1711985325647069739
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 3
+    - rid: 1711985325647069740
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 0}
+          m_Name:
+            m_String: 
+            m_ID: 0
+    - rid: 1711985325647069741
       type: {class: EventOnLateUpdate, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1711985325647069742
+      type: {class: Task, ns: GameCreator.Runtime.Quests, asm: GameCreator.Runtime.Quests}
+      data:
+        m_Completion: 0
+        m_IsHidden: 0
+        m_Name:
+          m_Property:
+            rid: 1711985325647069743
+        m_Description:
+          m_Property:
+            rid: 1711985325647069753
+        m_Color:
+          m_Property:
+            rid: 1711985325647069745
+        m_Sprite:
+          m_Property:
+            rid: 1711985325647069752
+        m_UseCounter: 0
+        m_CountTo:
+          m_Property:
+            rid: 1711985325647069747
+        m_ValueFrom:
+          m_Property:
+            rid: 1711985325647069748
+        m_CheckWhen:
+          m_Event:
+            rid: 1711985325647069749
+        m_OnActivate:
+          m_Instructions:
+            m_Instructions: []
+        m_OnDeactivate:
+          m_Instructions:
+            m_Instructions: []
+        m_OnComplete:
+          m_Instructions:
+            m_Instructions: []
+        m_OnAbandon:
+          m_Instructions:
+            m_Instructions: []
+        m_OnFail:
+          m_Instructions:
+            m_Instructions: []
+    - rid: 1711985325647069743
+      type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: Find the meat truck2
+    - rid: 1711985325647069745
+      type: {class: GetColorColorsWhite, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1711985325647069747
+      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Value: 3
+    - rid: 1711985325647069748
+      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
+      data:
+        m_Variable:
+          m_TypeID:
+            m_String: number
+          m_Variable: {fileID: 0}
+          m_Name:
+            m_String: 
+            m_ID: 0
+    - rid: 1711985325647069749
+      type: {class: EventOnLateUpdate, ns: GameCreator.Runtime.VisualScripting, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1711985325647069750
+      type: {class: GetStringEmpty, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 1711985325647069751
+      type: {class: GetSpriteInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Sprite: {fileID: 21300000, guid: 5bddcd8f4788c44aba9db39ff15fa7f2, type: 3}
+    - rid: 1711985325647069752
+      type: {class: GetSpriteInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Sprite: {fileID: 21300000, guid: 5bddcd8f4788c44aba9db39ff15fa7f2, type: 3}
+    - rid: 1711985325647069753
+      type: {class: GetStringEmpty, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
     - rid: 3872144746900619276
       type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
@@ -68,9 +211,9 @@ MonoBehaviour:
     - rid: 3872144746900619280
       type: {class: TasksTree, ns: GameCreator.Runtime.Quests, asm: GameCreator.Runtime.Quests}
       data:
-        m_Dirty: 82839
+        m_Dirty: 60981
         m_Data:
-          m_Keys: 62abab1cbbb78a11bf8da4b0
+          m_Keys: 62abab1cbbb78a11138a0e4c2f66d84b
           m_Values:
           - m_Id: 481012578
             m_Value:
@@ -78,19 +221,25 @@ MonoBehaviour:
           - m_Id: 294303675
             m_Value:
               rid: 3872144746900619292
-          - m_Id: -1331393089
+          - m_Id: 1276021267
             m_Value:
-              rid: 3872144746900619300
+              rid: 1711985325647069734
+          - m_Id: 1272473135
+            m_Value:
+              rid: 1711985325647069742
         m_Nodes:
-          m_Keys: 62abab1cbbb78a11bf8da4b0
+          m_Keys: 62abab1cbbb78a11138a0e4c2f66d84b
           m_Values:
           - m_Id: 481012578
             m_Parent: -1
-            m_Children: bbb78a11bf8da4b0
+            m_Children: bbb78a11138a0e4c2f66d84b
           - m_Id: 294303675
             m_Parent: 481012578
             m_Children: 
-          - m_Id: -1331393089
+          - m_Id: 1276021267
+            m_Parent: 481012578
+            m_Children: 
+          - m_Id: 1272473135
             m_Parent: 481012578
             m_Children: 
         m_Roots: 62abab1c
@@ -231,80 +380,10 @@ MonoBehaviour:
           m_Name:
             m_String: 
             m_ID: 0
-    - rid: 3872144746900619300
-      type: {class: Task, ns: GameCreator.Runtime.Quests, asm: GameCreator.Runtime.Quests}
-      data:
-        m_Completion: 0
-        m_IsHidden: 0
-        m_Name:
-          m_Property:
-            rid: 3872144746900619301
-        m_Description:
-          m_Property:
-            rid: 3872144746900619318
-        m_Color:
-          m_Property:
-            rid: 3872144746900619303
-        m_Sprite:
-          m_Property:
-            rid: 3872144746900619319
-        m_UseCounter: 0
-        m_CountTo:
-          m_Property:
-            rid: 3872144746900619305
-        m_ValueFrom:
-          m_Property:
-            rid: 3872144746900619306
-        m_CheckWhen:
-          m_Event:
-            rid: 1711985325647069194
-        m_OnActivate:
-          m_Instructions:
-            m_Instructions: []
-        m_OnDeactivate:
-          m_Instructions:
-            m_Instructions: []
-        m_OnComplete:
-          m_Instructions:
-            m_Instructions: []
-        m_OnAbandon:
-          m_Instructions:
-            m_Instructions: []
-        m_OnFail:
-          m_Instructions:
-            m_Instructions: []
-    - rid: 3872144746900619301
-      type: {class: GetStringString, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Value: Defeat all the Dawg's
-    - rid: 3872144746900619303
-      type: {class: GetColorColorsWhite, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
-    - rid: 3872144746900619305
-      type: {class: GetDecimalDecimal, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Value: 3
-    - rid: 3872144746900619306
-      type: {class: GetDecimalGlobalName, ns: GameCreator.Runtime.Variables, asm: GameCreator.Runtime.Core}
-      data:
-        m_Variable:
-          m_TypeID:
-            m_String: number
-          m_Variable: {fileID: 0}
-          m_Name:
-            m_String: 
-            m_ID: 0
     - rid: 3872144746900619316
       type: {class: GetStringEmpty, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data: 
     - rid: 3872144746900619317
-      type: {class: GetSpriteInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data:
-        m_Sprite: {fileID: 21300000, guid: 5bddcd8f4788c44aba9db39ff15fa7f2, type: 3}
-    - rid: 3872144746900619318
-      type: {class: GetStringEmpty, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
-      data: 
-    - rid: 3872144746900619319
       type: {class: GetSpriteInstance, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
       data:
         m_Sprite: {fileID: 21300000, guid: 5bddcd8f4788c44aba9db39ff15fa7f2, type: 3}

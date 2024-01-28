@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Playables;
+//using UnityEditor.Playables;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -11,6 +11,7 @@ public class AbilityManager : MonoBehaviour, IAbilityManager
 
     public Animator animator;
     public NavMeshAgent agent;
+    public bool isAnimal;
     // Start is called before the first frame update
     void Start()
     {
@@ -76,6 +77,7 @@ public class AbilityManager : MonoBehaviour, IAbilityManager
         if(animator != null && agent != null)
         {
             animator.SetFloat("Speed", agent.velocity.magnitude);
+            animator.SetBool("IsAnimal", isAnimal);
         }
     }
 }

@@ -44,11 +44,11 @@ public class Ability_Search : MonoBehaviour, IAbility
         {
             foreach (GameObject target in Targets)
             {
+                if(target!=null && target.activeInHierarchy)
                 if (Vector3.Distance(transform.position, target.transform.position) < minDistance)
                 {
                     minDistance = Vector3.Distance(transform.position, target.transform.position);
                     newTargetPos = target.transform.position;
-                    Debug.Log("Target Set");
                     newTarget = target;
                 }
             }
@@ -118,4 +118,8 @@ public class Ability_Search : MonoBehaviour, IAbility
         }
     }
 
+    public void EnableIgnoreAbility(bool ignore)
+    {
+        ignoreAbility = ignore;
+    }
 }

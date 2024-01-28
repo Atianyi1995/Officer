@@ -16,6 +16,7 @@ public class Ability_Move : MonoBehaviour, IAbility
     public Vector3 targetPos;
     public bool targetPosReached;
     NavMeshAgent navMeshAgent;
+    public float stopDist =2f;
    
     public void RunAbility()
     {
@@ -29,9 +30,10 @@ public class Ability_Move : MonoBehaviour, IAbility
         if (navMeshAgent != null)
         {
             navMeshAgent.SetDestination(new Vector3(targetPos.x, transform.position.y, targetPos.z));
-            if (Vector3.Distance(targetPos, transform.position) <= 1)
+            if (Vector3.Distance(targetPos, transform.position) <= stopDist)
             {
                 targetPosReached = true;
+                navMeshAgent.ResetPath();
             }
         }
         else
