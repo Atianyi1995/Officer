@@ -18,10 +18,10 @@ public class ProjectileScript : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.forward * movespeed * Time.deltaTime);
-        Slipper.transform.Rotate(Vector3.forward * speed * Time.deltaTime);
+        //Slipper.transform.Rotate(Vector3.forward * speed * Time.deltaTime);
     }
     public void OnTriggerEnter(Collider other)
     {
-        
+        Destroy(gameObject);
     }
 }
